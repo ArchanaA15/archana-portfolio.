@@ -1,0 +1,10 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; color-scheme: dark; }
+body { @apply font-body text-ink bg-[#0b0a1a] antialiased; }
+h1,h2,h3 { @apply font-display; }
+:focus-visible { outline: 3px solid #a78bfa; outline-offset: 3px; border-radius: 8px; }
+.glass { @apply bg-white/[.06] backdrop-blur-md border border-white/10 shadow-[0_10px_40px_-12px_rgba(0,0,0,.6)]; }
+.grad-text { background: linear-gradient(90deg,#a78bfa,#f472b6,#22d3ee); -webkit-background-clip: text; color: transparent; }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+.dust { position: absolute; border-radius: 9999px; background: #c4c8ff; opacity: .25; animation: tw 4s ease-in-out infinite; }
+@keyframes tw { 50% { opacity: .75; } }
